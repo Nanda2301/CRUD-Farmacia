@@ -1,8 +1,14 @@
 import { Injectable } from "@nestjs/common";
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from "@nestjs/typeorm";
-import { Medicamento } from "../../medicamento/entities/medicamento.entity";
+import { Produto } from "../../produto/entities/produto.entity";
 import { Funcionario } from "../../funcionario/entities/funcionario.entity";
 import { Cliente } from "../../cliente/entities/cliente.entity";
+import { Categoria } from "../../categoria/entities/categoria.entity";
+import { Fornecedor } from "../../fornecedor/entities/fornecedor.entity";
+import { Venda } from "../../venda/entities/venda.entity";
+import { Prescricao } from "../../prescricao/entities/prescricao.entity";
+import { Estoque } from "../../estoque/entities/estoque.entity";
+import { ItemVenda } from "../../venda/entities/itemvenda.entity";
 
 @Injectable()
 export class DevService implements TypeOrmOptionsFactory {
@@ -14,7 +20,17 @@ export class DevService implements TypeOrmOptionsFactory {
             username: 'root',
             password: '1234',
             database: 'db_farmacia',
-            entities: [Medicamento, Funcionario, Cliente],
+            entities: [
+                Produto,
+                Funcionario,
+                Cliente,
+                Categoria,
+                Fornecedor,
+                Venda,
+                ItemVenda,
+                Prescricao,
+                Estoque
+            ],
             synchronize: true,
         };
     }

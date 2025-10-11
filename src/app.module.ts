@@ -1,21 +1,31 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { AppController } from "./app.controller";
-import { MedicamentoModule } from "./medicamento/medicamento.module";
+import { ProdutoModule } from "./produto/produto.module";
 import { FuncionarioModule } from "./funcionario/funcionario.module";
 import { ClienteModule } from "./cliente/cliente.module";
 import { AuthModule } from "./auth/auth.module";
-import { DevService } from "./data/services/dev.service"; // Importando o DevService
+import { CategoriaModule } from "./categoria/categoria.module";
+import { FornecedorModule } from "./fornecedor/fornecedor.module";
+import { VendaModule } from "./venda/venda.module";
+import { PrescricaoModule } from "./prescricao/prescricao.module";
+import { EstoqueModule } from "./estoque/estoque.module";
+import { DevService } from "./data/services/dev.service";
 
 @Module({
     imports: [
         TypeOrmModule.forRootAsync({
-            useClass: DevService, // Usando o DevService para a configuração do banco de dados
+            useClass: DevService,
         }),
-        MedicamentoModule,
+        ProdutoModule,
         FuncionarioModule,
         ClienteModule,
-        AuthModule
+        AuthModule,
+        CategoriaModule,
+        FornecedorModule,
+        VendaModule,
+        PrescricaoModule,
+        EstoqueModule
     ],
     controllers: [AppController],
     providers: [],
