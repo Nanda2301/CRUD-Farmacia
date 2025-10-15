@@ -3,7 +3,7 @@ import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from "@nestjs/typeorm";
 import { Produto } from "../../produto/entities/produto.entity";
 import { Funcionario } from "../../funcionario/entities/funcionario.entity";
 import { Cliente } from "../../cliente/entities/cliente.entity";
-import { Categoria } from "../../Categoria/entities/categoria.entity";
+import { Categoria } from "../../categoria/entities/categoria.entity";
 import { Fornecedor } from "../../fornecedor/entities/fornecedor.entity";
 import { Venda } from "../../venda/entities/venda.entity";
 import { Prescricao } from "../../prescricao/entities/prescricao.entity";
