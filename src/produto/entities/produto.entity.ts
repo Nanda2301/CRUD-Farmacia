@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsNumber, IsString } from "class-validator";
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { Categoria } from "../../categoria/entities/categoria.entity";
+import { Categoria } from "../../Categoria/entities/categoria.entity";
 import { Fornecedor } from "../../fornecedor/entities/fornecedor.entity";
 import { ItemVenda } from "../../venda/entities/itemvenda.entity";
 

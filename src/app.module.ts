@@ -5,7 +5,7 @@ import { ProdutoModule } from "./produto/produto.module";
 import { FuncionarioModule } from "./funcionario/funcionario.module";
 import { ClienteModule } from "./cliente/cliente.module";
 import { AuthModule } from "./auth/auth.module";
-import { CategoriaModule } from "./categoria/categoria.module";
+import { CategoriaModule } from "./Categoria/categoria.module";
 import { FornecedorModule } from "./fornecedor/fornecedor.module";
 import { VendaModule } from "./venda/venda.module";
 import { PrescricaoModule } from "./prescricao/prescricao.module";
